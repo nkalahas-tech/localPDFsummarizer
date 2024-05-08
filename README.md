@@ -1,4 +1,4 @@
-# Langchain RAG Tutorial
+# Local PDF Summarizer
 
 Install dependencies.
 
