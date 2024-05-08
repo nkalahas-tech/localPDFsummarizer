@@ -1,21 +1,25 @@
-# Langchain RAG Tutorial
+# PDF Summarizer
+You'll also need to download Ollama via https://ollama.com/download for this to work when starting.
 
-Install dependencies.
 
-```python
-pip install -r requirements.txt
-```
-
-Create the Chroma DB.
+Install all these dependencies on your terminal after downloading Ollama.
 
 ```python
-python create_database.py
+pip install langchain
+pip install langchain-community
+pip install --q unstructured langchain
+pip install --q "unstructured[all-docs]"
+pip install --q chromadb
+pip install --q langchain-text-splitters
 ```
 
-Query the Chroma DB.
-
+Then use the Ollama library that you downloaded.
 ```python
-python query_data.py "How does Alice meet the Mad Hatter?"
+ollama pull nomic-embed-text
+ollama list
 ```
 
-You'll also need to set up an OpenAI account (and set the OpenAI key in your environment variable) for this to work.
+Finally, run the python file. 
+```python
+python3 read.py 
+```
